@@ -12,6 +12,10 @@ h3 {
   font-weight: 700;
 }
 
+.bottom-table {
+  border-bottom: 1px solid #dddddd;
+}
+
 #previous {
   color: #8f8f8f;
   margin-bottom: 2px;

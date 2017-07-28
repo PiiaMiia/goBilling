@@ -1,6 +1,5 @@
 :host {
   border-bottom: 1px solid #e1e1e1;
-  border-bottom-width: 1px;
   display: block;
   height: 48px;
   padding: 0 16px;
@@ -8,11 +7,13 @@
 }
 
 nav a {
+  float: right;
   color: #8f8f8f;
   font-size: 14px;
   font-weight: 500;
   line-height: 48px;
-  margin-right: 20px;
+  padding: 0 20px 0 10px;
+  border-left: 1px solid #e1e1e1;
   text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
