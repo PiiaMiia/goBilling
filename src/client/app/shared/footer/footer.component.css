@@ -34,6 +34,7 @@ html {
 .help {
   color: #189c00;
   font-weight: 500;
+  top: -6px;
 }
 .provider {
   color: #8f8f8f;

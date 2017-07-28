@@ -7,11 +7,11 @@
   <tbody>
     <tr>
       <td>
-        <span>Next billinng date:</span>
+        <span>Next billing date: <strong>{{ details.billingDate }}</strong></span>
         <br>
-        <span>Service:</span>
+        <span>Service: <strong>{{ details.service }}</strong></span>
         <br>
-        <span>Service provider:</span>
+        <span>Service provider: <strong>{{ details.provider }}</strong></span>
       </td>
     </tr>
     <tr>
@@ -29,17 +29,13 @@
       <td>Service period</td>
       <td>Total</td>
     </tr>
-    <tr>
-      <td>13.04.17</td>
-      <td>13.04.17-12.05.17</td>
-      <td>€2.99</td>
-    </tr>
-    <tr>
-      <td>12.03.17</td>
-      <td>12.03.17-12.04.17</td>
-      <td>€2.99</td>
+    <tr *ngFor="let payment of payments">
+      <td>{{ payment.date }}</td>
+      <td>{{ payment.period }}</td>
+      <td>{{ payment.currency }} {{ payment.total }}</td>
     </tr>
   </tbody>
 </table>
+
 
 <button type="button">Cancel subscription</button>
