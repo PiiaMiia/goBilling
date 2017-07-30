@@ -28,12 +28,22 @@ export class HomeComponent implements OnInit {
         () => console.log(this.payments)
       );
   }
+
   getDetails() {
     this.paymentService.getDetails()
       .subscribe(
        detail => this.details = detail,
        error => console.log(error),
         () => console.log(this.details)
+      );
+  }
+
+  unsubscribe(element) {
+    this.paymentService.unsubscibe()
+      .subscribe(
+        detail => this.details = detail,
+        error => console.log(error),
+        () => element.textContent = 'Start subscription'
       );
   }
 }

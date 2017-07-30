@@ -19,6 +19,12 @@ export class PaymentService {
       .catch(this.handleError);
   }
 
+  unsubscibe(): Observable<string[]> {
+    return this.http.delete(`${Config.API}/details`)
+      .map((res: Response) => res.json())
+      .catch(this.handleError);
+  }
+
   private handleError (error: any) {
     let errMsg = (error.message) ? error.message :
       error.status ? `${error.status} - ${error.statusText}` : 'Server error';
