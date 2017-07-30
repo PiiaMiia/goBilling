@@ -39,11 +39,20 @@ export class HomeComponent implements OnInit {
   }
 
   unsubscribe(element) {
-    this.paymentService.unsubscibe()
-      .subscribe(
-        detail => this.details = detail,
-        error => console.log(error),
-        () => element.textContent = 'Start subscription'
-      );
+    if (this.details.serviceType === 'Free') {
+      this.paymentService.reSubscibe()
+        .subscribe(
+          detail => this.details = detail,
+          error => console.log(error),
+          () => element.textContent = 'Cancel subscription'
+        );
+    } else {
+      this.paymentService.unsubscribe()
+        .subscribe(
+          detail => this.details = detail,
+          error => console.log(error),
+          () => element.textContent = 'Start subscription'
+        );
+    }
   }
 }

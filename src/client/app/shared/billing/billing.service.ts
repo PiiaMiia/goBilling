@@ -19,8 +19,14 @@ export class PaymentService {
       .catch(this.handleError);
   }
 
-  unsubscibe(): Observable<string[]> {
+  unsubscribe(): Observable<string[]> {
     return this.http.delete(`${Config.API}/details`)
+      .map((res: Response) => res.json())
+      .catch(this.handleError);
+  }
+
+  reSubscibe(): Observable<string[]> {
+    return this.http.post(`${Config.API}/details`, {})
       .map((res: Response) => res.json())
       .catch(this.handleError);
   }
