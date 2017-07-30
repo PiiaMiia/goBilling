@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import { Config } from '../config/env.config';
 
 @Injectable()
 export class PaymentService {
 
   constructor(private http: Http) {}
   getPayments(): Observable<string[]> {
-    return this.http.get('assets/payments.json')
+    return this.http.get(`${Config.API}/bills`)
       .map((res: Response) => res.json())
       .catch(this.handleError);
   }
