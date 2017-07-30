@@ -14,7 +14,7 @@ export class PaymentService {
   }
 
   getDetails(): Observable<string[]> {
-    return this.http.get('assets/details.json')
+    return this.http.get(`${Config.API}/details`)
       .map((res: Response) => res.json())
       .catch(this.handleError);
   }
