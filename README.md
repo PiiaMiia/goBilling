@@ -2,7 +2,11 @@
 
 # How to start
 
-**Note** that this seed project requires node v4.x.x or higher and npm 2.14.7 but in order to be able to take advantage of the complete functionality we **strongly recommend node >=v6.5.0 and npm >=3.10.3**.
+Ready to use deployed version can be found here: http://188.166.58.182/
+
+If you want to run it in local, then follow the steps below:
+
+**Note** that this seed project requires node v4.x.x or higher and npm 2.14.7 but in order to be able to take advantage of the complete functionality it is **strongly recommended to use node >=v6.5.0 and npm >=3.10.3**.
 
 In order to start the seed use:
 
@@ -20,7 +24,7 @@ $ npm start
 Now open your browser* at http://localhost:5555
 ```
 
-* Since the backend app will run at a different localhost a CORS error might occure. In order to avoid this in local testing, please create a Chrome shortcut with the following flag:
+* Since the backend app will run at different localhost ports a CORS error might occure. In order to avoid this in local testing, please create a Chrome shortcut with the following flag:
 ```bash
 --disable-web-security --user-data-dir="c:/someFolderName"
 ```
