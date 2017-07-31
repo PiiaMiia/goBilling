@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
       );
   }
 
-  unsubscribe(element) {
+  unsubscribe(element: any) {
     if (this.details.serviceType === 'Free') {
       this.paymentService.reSubscibe()
         .subscribe(

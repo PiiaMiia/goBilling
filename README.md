@@ -40,3 +40,12 @@ Configure at runtime
 ```bash
 $ npm start -- --port 8080 --base /my-app/
 ```
+
+# End-to-end Testing
+```bash
+# npm install webdriver-manager <- Install this first for e2e testing
+# npm run webdriver-update <- You will need to run this the first time
+$ npm run webdriver-start
+$ npm run serve.e2e
+$ npm run e2e
+```
