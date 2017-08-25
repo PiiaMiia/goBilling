@@ -1,3 +1,9 @@
-/**
- * Created by piia.orav on 16.08.2017.
- */
+import { Component } from '@angular/core';
+
+@Component({
+  moduleId: module.id,
+  selector: 'sd-register',
+  templateUrl: 'register.component.html',
+  styleUrls: ['register.component.css']
+})
+export class RegisterComponent { }

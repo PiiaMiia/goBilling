@@ -1,16 +1,11 @@
-/**
- * Created by piia.orav on 16.08.2017.
- */
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login.component';
-import { SharedModule } from '../shared/shared.module';
-import { PaymentService } from '../shared/billing/billing.service';
-
+import { LoginRoutingModule } from './login-routing.module';
 
 @NgModule({
-  imports: [SharedModule],
+  imports: [CommonModule, LoginRoutingModule],
   declarations: [LoginComponent],
-  exports: [LoginComponent],
-  providers: [PaymentService]
+  exports: [LoginComponent]
 })
 export class LoginModule { }

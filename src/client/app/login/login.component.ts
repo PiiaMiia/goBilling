@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Component } from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -7,11 +6,4 @@ import { Router, ActivatedRoute } from '@angular/router';
   templateUrl: 'login.component.html',
   styleUrls: ['login.component.css']
 })
-
-export class LoginComponent implements OnInit {
-
-  ngOnInit() {
-    this.ngOnInit();
-  }
-
-}
+export class LoginComponent { }
